@@ -84,11 +84,14 @@ var formatters = {
     switch (token) {
       // Short
       case 'z':
+        return tzIntlTimeZoneName('shortGeneric', originalDate, options)
       case 'zz':
       case 'zzz':
         return tzIntlTimeZoneName('short', originalDate, options)
       // Long
       case 'zzzz':
+        return tzIntlTimeZoneName('longGeneric', originalDate, options)
+      case 'zzzzz':
       default:
         return tzIntlTimeZoneName('long', originalDate, options)
     }
